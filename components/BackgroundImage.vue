@@ -29,10 +29,8 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-    <NuxtImg v-if="pageWidth <= 594" :src="mobileSrc" :alt="alt"
-        class="w-full h-full object-cover object-top shadow-[0_4px_4px_rgba(0,0,0,0.25)]" />
+    <NuxtImg v-if="pageWidth <= 594" :src="mobileSrc" :alt="alt" class="w-full h-[748px] object-cover object-top" />
     <NuxtImg v-if="pageWidth > 594 && pageWidth <= 1439" :src="tabletSrc" :alt="alt"
-        class="w-full h-full object-cover object-top shadow-[0_4px_4px_rgba(0,0,0,0.25)]" />
-    <NuxtImg v-if="pageWidth > 1439" :src="desktopSrc" :alt="alt"
-        class="w-full h-full object-cover object-top shadow-[0_4px_4px_rgba(0,0,0,0.25)]" />
+        class="w-full h-[992px] object-cover object-top" />
+    <NuxtImg v-if="pageWidth > 1439" :src="desktopSrc" :alt="alt" class="w-full h-[820px] object-cover object-top" />
 </template>
